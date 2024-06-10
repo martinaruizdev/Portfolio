@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="img/jpg" href="img/clic.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Martina Ruiz | Frontend Developer</title>
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <nav>
+                    <!-- menu hamb -->
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#trabajos">Trabajos</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <!-- <li><a href="#">CV/Resume</a></li> -->
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="texto">
+                    <h1>¡Hola! Soy Martina Ruiz, Desarrolladora<span> Front-End</span>.</h1>
+                    <div class="btn-hero">
+                        <a href="#contacto" class="btn cont">Contactar</a>
+                        <a href="#" class="btn active">Descargar CV</a>
+                    </div>
+                </div>
+                <div class="foto">
+                    <img src="img/martu.jpg" alt="Foto de perfil">
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="sobremi" class="hiddenLeft">
+        <div>
+            <img src="img/css.svg" alt="" loading="lazy" width="500">
+        </div>
+        <div class="wrapper sobremi">
+            <h2>Sobre Mí 🚀</h2>
+            <p>Soy Martina, Desarrolladora <span>Frontend</span>. Tengo 23 años. Actualmente estoy cursando la carrera de <span>Analista de Sistemas</span> en Escuela Da Vinci, Argentina, donde también participo como ayudante de cátedra en la materia Diseño Web (HTML, CSS, Bootstrap). Comencé mi camino en el desarrollo web en 2022 con HTML y CSS, y en 2023 realicé un curso de <span>desarrollo web Full-Stack</span>. Previamente había cursado 2 años de la carrera de Diseño Gráfico, donde adquirí mucho conocimiento en diseño y creación de interfaces atractivas y el uso de otras herramientas como Figma. Aunque mi especialización es el Front, también tengo conocimiento y manejo de <span> Backend</span>.</p>
+        </div>
+    </section>
+    <section id="trabajos" class="hiddenRight">
+        <h2>Trabajos💼</h2>
+        <p id="clickear">¡Clickea las imágenes para acceder a los sitios!</p>
+        <div class="galeria">
+            <div class="card">
+                <figure>
+                <img src="img/web1.png" alt="" loading="lazy" class="zoom">                    
+                </figure>
+                <div class="texto-card">
+                    <h3>WatchAtHome</h3>
+                    <p>Sitio web de streaming de películas y series.</p>
+                    <p><span>Hecho con: HTML, CSS, PHP.</span></p>
+                    <button class="btn-sitio"><a href="">Ver Sitio</a></button>
+                </div>
+            </div>
+
+            <div class="card">
+                <figure>
+                    <img src="img/web2.png" alt="" loading="lazy" class="zoom">
+                </figure>
+                <div class="texto-card">
+                <h3>Tablero Kanban</h3>
+                <p>Tablero Kanban interactivo.</p>
+                <p><span>Hecho con: HTML, CSS, Javascript.</span></p>
+                <button class="btn-sitio"><a href="">Ver Sitio</a></button>                    
+                </div>
+            </div>
+
+            <div class="card">
+                <figure>
+                <img src="img/web3.png" alt="" loading="lazy" class="zoom">                    
+                </figure>
+                <div class="texto-card">
+                <h3>Portfolio</h3>
+                <p>Portfolio personal.</p>
+                <p><span>Hecho con: HTML, CSS, Javascript.</span></p>
+                <button class="btn-sitio"><a href="">Ver Sitio</a></button>                    
+                </div>
+
+            </div>
+
+            <div class="card">
+                <figure>
+                <img src="img/web4.png" alt="" loading="lazy" class="zoom">                    
+                </figure>
+                <div class="texto-card">
+                <h3>Inicio de sesión</h3>
+                <p>WatchAtHome log in.</p>
+                <p><span>Hecho con: HTML, CSS, PHP.</span></p>
+                <button class="btn-sitio"><a href="">Ver Sitio</a></button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="hiddenLeft">
+        <h2>Mis Skills💡</h2>
+        <div id="skills-cards">
+        <div class="skill" id="front">
+            <h3>Frontend</h3>
+                <figure>
+                    <img loading="lazy" src="img/html.png" alt="html-logo">
+                    <img loading="lazy" src="img/css-logo.svg" alt="css-logo">
+                    <img loading="lazy" src="img/js.png" alt="js-logo">
+                    <img loading="lazy" src="img/react.webp" alt="react-logo">
+                    <img loading="lazy" src="img/bs-logo.png" alt="bootstrap-logo" id="bs">
+                    <img loading="lazy" src="img/tailwind.png" alt="tailwind-logo">
+                </figure>
+        </div>
+
+        <div class="skill" id="back">
+            <h3>Backend</h3>
+            <figure>
+                <img loading="lazy" src="img/mongo.png" alt="">
+                <img loading="lazy" src="img/express.png" alt="" id="express">
+                <img loading="lazy" src="img/node.png" alt="">
+            </figure>
+        </div>
+
+        <div class="skill" id="extras">
+            <h3>Extras</h3>
+            <figure>
+                <img loading="lazy" src="img/git.png" alt="">
+                <img loading="lazy" src="img/figma.png" alt="" id="figma">
+                <img loading="lazy" src="img/ps.png" alt="" >
+                <img loading="lazy" src="img/office.png" alt="" >
+            </figure>
+        </div>
+    </div>
+    </section>
+
+    <section id="contacto" class="hiddenRight">
+        <div id="texto-contacto">
+            <h2>Contáctame🤝🏻</h2>
+            <p>Puede enviar un correo a: <a href="https://accounts.google.com/signin/v2/identifier?passive=1209600&continue=https%3A%2F%2Faccounts.google.com%2FEditPasswd%3Fhl%3Des&followup=https%3A%2F%2Faccounts.google.com%2FEditPasswd%3Fhl%3Des&hl=es&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank">martinaruizdev@gmail.com</a> o a mi <a href="https://wa.link/gf93e0" target="_blank"> teléfono celular </a>para una respuesta más rápida⭐</p>
+            <p>O dejar un mensaje en el siguiente formulario.</p>
+            <p>¡Gracias!</p>
+            <div>
+                <ul id="redes">
+                    <li><a href="https://www.linkedin.com/in/martina-ruiz-3a43712a2/" target="_blank"><i class="fa-brands fa-linkedin" style="color: #f24498;"></i></a></li>
+                    <li><a href="https://github.com/martinaruizdev" target="_blank"><i class="fa-brands fa-github" style="color: #f24498;"></i></a></li>
+                    
+                </ul>
+            </div>
+            <form>
+                <div>
+                    <label for="">Nombre</label>
+                    <input type="text" name="" id="">
+                </div>
+                <div>
+                    <label for="">Correo</label>
+                    <input type="text" name="" id="">
+                </div>
+                <div>
+                    <label for="">Mensaje</label>
+                    <textarea name="" id=""></textarea>
+                </div>
+                <div>
+                    <input type="submit" name="" id="enviar">
+                </div>
+            </form>
+        </div>
+        <div>
+            <img src="img/work.svg" alt="" width="400">
+        </div>
+    </section>
+    <script defer src="app.js"></script>
+</body>
+</html>
