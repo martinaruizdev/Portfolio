@@ -5,10 +5,12 @@
     font-family: "Inter", sans-serif;
     text-decoration: none;
     scroll-behavior: smooth;
+    /* border: 1px solid red; */
 }
 
 body{
-    background-color: #091620;
+    background: rgb(13, 17, 48);
+    background: radial-gradient(circle, rgb(19, 13, 48) 0%, rgba(9,22,32,1) 100%);
     overflow-x: hidden;
 }
 
@@ -35,39 +37,27 @@ header{
 nav {
     width: 100%;
     z-index: 4;
+    overflow: hidden;
+    display: flex;
+    position: fixed;
+    height: 3rem;
+    background: rgba(9, 22, 32, 0.22);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 10px;
 }
 
-nav .togglebtn{
-    width: 35px;
-    height: 35px;
-    position: absolute;
-    top: 45px;
-    right: 3%;
-    z-index: 5;
-    cursor: pointer;
-    background: none;
-    display: none;
-}
-
-nav .togglebtn span{
-    display: block;
-    background-color: #f24498;
-    margin: 5px 0px;
-    width: 100%;
-    height: 3px;
-    transition: 0.3s;
-    transition-property: transform, opacity;
-}
-
-nav .navlinks {
+.navlinks {
     display: flex;
     justify-content: flex-end;
     list-style-type: none;
     width: 82%;
 }
 
-nav .navlinks li {
+.navlinks li {
     margin-left: 22px; /* Espacio entre los elementos del menú */
+    display: flex;
+    align-items: center;
 }
 
 nav .navlinks li a{
@@ -88,7 +78,7 @@ nav .navlinks li a:hover{
     justify-content: space-around;
     align-items: center;
     padding-top: 4.2rem;
-    width: 90%;
+    max-width: 90%;
     margin: auto;
 }
 
@@ -285,8 +275,12 @@ nav .navlinks li a:hover{
     margin: .5rem;
 }
 
-#express, #figma, #bs{
+#figma, #bs{
     width: auto;
+}
+
+#php{
+    width: 110px;
 }
 
 #front{
@@ -340,8 +334,16 @@ nav .navlinks li a:hover{
     width: 50%;
 }
 
+#texto-contacto p{
+    margin: 1rem auto;
+}
+
+#texto-contacto span{
+    font-weight: 600;
+}
+
 #contacto h2{
-    margin-bottom: 2.2rem;
+    margin-bottom: 1.8rem;
     font-size: 2rem;
 }
 
@@ -378,50 +380,6 @@ nav .navlinks li a:hover{
     text-underline-offset: 6px;
 }
 
-form div{
-    display: flex;
-    flex-direction: column;
-    color: #F7F7FF;
-    font-size: 1.3rem;
-    font-weight: 500;
-    margin-bottom: 1.8rem;
-}
-
-label{
-    margin-bottom: .5rem;
-}
-
-input,textarea{
-    background: none;
-    border: 2px solid #f24498;
-    height: 2.5rem;
-    border-radius: 6px;
-    color: #e4e4ec;
-    font-size: 1rem;
-    font-weight: 300;
-    padding: 0 .7rem;
-}
-
-#enviar{
-    background: none;
-    font-family: "Inter", sans-serif;
-    font-size: 1.1rem;
-    color: #F7F7FF;
-    border: 2px solid #8641f6;
-    box-shadow: 0px 0px 8px #8641f632;
-    border-radius: 10px;
-    margin: 1rem 0 0 0;
-    height: 3rem;
-    font-weight: 600;
-}
-
-#enviar:hover{
-    background-color: #8641f632;
-    color: #b181fe;
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-
 .btn-sitio{
     padding: .5rem 1rem;
     margin: 1rem auto;
@@ -443,26 +401,15 @@ input,textarea{
     text-align: center;
 }
 
+.abrir-menu{
+    display: none;
+}
+
 
 /*compu normal*/
 
 @media(min-width:931px){
-    nav{
-        display: flex;
-        position: fixed;
-        height: 3rem;
-        background: rgba(9, 22, 32, 0.22);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border-radius: 10px;
-    }
-    nav .navlinks li{
-        display: flex;
-        align-items: center;
-    }
-    #sobremi{
-        background-color: #091620;
-    }
+
     .container{
         padding-top: 4.5rem;
     }
@@ -473,60 +420,17 @@ input,textarea{
 
 /* tablet. Visibilidad menu hamb */
 @media(max-width:930px){
-    nav .togglebtn{
-        display: initial;
-    }
-    .click{
-        top: 45px;
-    }
-    .click span{
-        position: absolute;
-        margin-top: 12px;
-    }
-    .click span:first-child{
-        transform: rotate(-40deg);
-    }
-    .click span:nth-child(2){
-        opacity: 0;
-        margin: 0;
-    }
-    .click span:last-child{
-        transform: rotate(45deg);
-        top: 0;
-    }
-    nav .navlinks{
-        position: absolute;
-        bottom: 0;
-        right: -100%;
-        width: 60%;
-        height: 100vh;
-        background-color: #091620;
-        z-index: 3;
-        box-shadow: 0px 0px 8px #8641f6;
-        transition: 0.5s;
-        display: grid;
-        place-content: center;
-        text-align: center;
-        gap: 4.5rem;
-    }
-    nav .navlinks li a{
-        font-size: 1.3rem;
-        color: #f24498;
-        font-weight: 600;
-    }
-
-    nav .navlinks.open{
-        right: 0;
-    }
 
     body{
         background-color: #091620;
-        overflow: hidden;
+        overflow-x: hidden;
+        max-width: 100%;
     }
     .container{
         flex-direction: column;
         padding-top: 2rem;
         overflow: hidden;
+        width: 100%;
     }
     .texto{
         text-align: center;
@@ -540,9 +444,11 @@ input,textarea{
         padding-top: 4rem;
     }
     .foto img{
-        width: auto;
-        height: auto;
+        /* width: auto;
+        height: auto; */
         object-fit: contain;
+        max-width: 100%;
+        height: auto;
     }
     .skill{
         width: 100%;
@@ -608,11 +514,14 @@ input,textarea{
 
 /* celulares */
 
-@media(max-width:419px){
+@media(max-width:430px){
     .container{
         overflow: hidden;
         flex-direction: column;
         width: 100%;
+    }
+    .wrapper{
+        max-width: 100%;
     }
     .foto{
         display: flex;
@@ -628,7 +537,7 @@ input,textarea{
         object-fit: contain;
     }
     header{
-        padding-top: 30px;
+        padding-top: 20px;
     }
     .texto{
         text-align: center;
@@ -644,6 +553,16 @@ input,textarea{
     h1{
         margin: 1rem 0 1.7rem 0;
         font-size: 2.1rem;
+    }
+    nav{
+        align-items: center;
+        justify-content: center;
+        height: 4.5rem;
+        padding-top: .8rem;
+    }
+    .navlinks li{
+        margin: auto;
+        text-align: center;
     }
     .galeria{
         max-width: 100%;
@@ -661,7 +580,7 @@ input,textarea{
         font-size: 1rem;
     }
     .sobremi{
-        padding: 0 1rem;
+        padding: 0 1.3rem;
         margin-bottom: 4rem;
     }
     .skill{
@@ -670,13 +589,6 @@ input,textarea{
         margin: 2.2rem;
         padding: 1rem 1.5rem;
         border-radius: 10px;
-    }
-    #back figure{
-        display: flex;
-        width: 100%;
-    }
-    #back img{
-        margin: auto;
     }
     #extras{
         padding: 1rem 2rem;
@@ -766,26 +678,19 @@ input,textarea{
 .hiddenLeft{
     opacity: 0;
     filter: blur(2px);
-    transform: translateX(-100%);
+
     transition: all 1s;
 }
 
 .hiddenRight{
     opacity: 0;
     filter: blur(2px);
-    transform: translateX(100%);
+
     transition: all 1s;
 }
 
 .show{
     opacity: 1;
     filter: blur(0);
-    transform: translateX(0);
-}
 
-
-@media(prefers-reduced-motion){
-    .hidden{
-        transition: none;
-    }
 }
