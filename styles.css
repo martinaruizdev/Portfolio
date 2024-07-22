@@ -573,7 +573,7 @@ nav .navlinks li a:hover{
         display: flex;
         flex-direction: column;
     }
-    #sobremi h2{
+    #sobremi h2, #sobremi p{
         text-align: center;
     }
     #sobremi p{
